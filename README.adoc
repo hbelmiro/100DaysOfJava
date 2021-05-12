@@ -1,0 +1,13 @@
+= 100 Days of Java
+:toc:
+
+A little of Java content every day for a hundred days.
+
+If you have any questions, ask me on my https://thegreatapi.com/social-media/[social media].
+
+== Day 1 - Generating a random number within a specific range.
+
+[source,java]
+----
+include::day001/src/main/java/com/thegreatapi/ahundreddaysofjava/day001/Day001.java[]
+----
