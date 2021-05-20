@@ -58,5 +58,6 @@
     </build>
     <modules>
         <module>day001</module>
+        <module>day002</module>
     </modules>
 </project>
