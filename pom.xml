@@ -59,5 +59,6 @@
     <modules>
         <module>day001</module>
         <module>day002</module>
+        <module>day003</module>
     </modules>
 </project>
