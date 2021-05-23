@@ -1,88 +1,5 @@
-= 100 Days of Java
-:toc:
+package com.thegreatapi.ahundreddaysofjava.day004;
 
-A little of Java content every day for a hundred days.
-
-If you have any questions, ask me on my https://thegreatapi.com/social-media/[social media].
-
-== Day 1 - Generating a random number within a specific range.
-
-[source,java]
-----
-import java.security.SecureRandom;
-
-public final class Day001 {
-
-    public static final SecureRandom SECURE_RANDOM = new SecureRandom();
-
-    public static void main(String[] args) {
-        System.out.println("Generating a number between 50 and 100...");
-        System.out.println(randomNumberBetween(50, 100));
-    }
-
-    private static int randomNumberBetween(int minimum, int maximum) {
-        return SECURE_RANDOM.nextInt(maximum - minimum) + minimum;
-    }
-
-}
-----
-
-== Day 2 - Formatting a `LocalDateTime` object.
-
-[source,java]
-----
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
-public final class Day002 {
-
-    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-
-    public static void main(String[] args) {
-        LocalDateTime currentDateTime = LocalDateTime.now();
-        String formattedDateTime = currentDateTime.format(FORMATTER);
-        System.out.println(formattedDateTime);
-    }
-
-}
-----
-
-== Day 3 - Scheduling a task to run every 2 seconds.
-
-[source,java]
-----
-import java.time.LocalTime;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
-
-public class Day003 {
-
-    private final ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
-
-    public static void main(String[] args) throws InterruptedException {
-        var day003 = new Day003();
-        day003.printCurrentTimeEvery2Seconds();
-        Thread.sleep(15_000);
-        day003.stopPrinting();
-    }
-
-    public void printCurrentTimeEvery2Seconds() {
-        Runnable task = () -> System.out.println(LocalTime.now());
-        scheduledExecutorService.scheduleAtFixedRate(task, 0, 2, TimeUnit.SECONDS);
-    }
-
-    public void stopPrinting() {
-        scheduledExecutorService.shutdown();
-    }
-
-}
-----
-
-== Day 4 - Removing items from a list.
-
-[source,java]
-----
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -165,4 +82,3 @@ public class Day004 {
     }
 
 }
-----
