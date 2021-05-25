@@ -44,6 +44,6 @@ public class Day005 {
         System.out.println(guitarPlayers);
     }
 
-    record BandMember(String name, String instrument) {
+    static record BandMember(String name, String instrument) {
     }
 }
