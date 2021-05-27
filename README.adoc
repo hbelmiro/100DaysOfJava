@@ -283,7 +283,7 @@ public class Day007 {
 }
 ----
 
-== Day 8 - Creating a thred pool to run tasks simultaneously and reuse threads.
+== Day 8 - Creating a thread pool to run tasks simultaneously and reuse threads.
 
 [source,java]
 ----
