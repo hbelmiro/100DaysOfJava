@@ -65,5 +65,6 @@
         <module>day006</module>
         <module>day007</module>
         <module>day008</module>
+        <module>day009</module>
     </modules>
 </project>
