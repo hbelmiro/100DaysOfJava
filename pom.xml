@@ -12,6 +12,12 @@
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.7.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <packaging>pom</packaging>
     <build>
@@ -66,5 +72,6 @@
         <module>day007</module>
         <module>day008</module>
         <module>day009</module>
+        <module>day010</module>
     </modules>
 </project>
