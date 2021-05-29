@@ -8,7 +8,7 @@ public class Day009 {
         }
     }
 
-    private enum Gender {
+    public enum Gender {
         FEMALE('f'),
         MALE('m');
 
