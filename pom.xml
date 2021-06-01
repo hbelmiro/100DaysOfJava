@@ -75,5 +75,6 @@
         <module>day010</module>
         <module>day011</module>
         <module>day012</module>
+        <module>day013</module>
     </modules>
 </project>
