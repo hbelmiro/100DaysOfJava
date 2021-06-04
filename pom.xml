@@ -13,6 +13,11 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.7.2</version>
@@ -77,5 +82,6 @@
         <module>day012</module>
         <module>day013</module>
         <module>day014</module>
+        <module>day015</module>
     </modules>
 </project>
