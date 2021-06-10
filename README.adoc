@@ -831,14 +831,14 @@ public class Day022 {
     }
 
     private static List<Order> readOrders() {
-        Customer gilmour = new Customer("David Gilmour", "Pink Floyd");
-        Customer iommi = new Customer("Toni Iommi", "Black Sabbath");
-        Customer rhoads = new Customer("Randy Rhoads", "Ozzy Osbourne");
+        var gilmour = new Customer("David Gilmour", "Pink Floyd");
+        var iommi = new Customer("Toni Iommi", "Black Sabbath");
+        var rhoads = new Customer("Randy Rhoads", "Ozzy Osbourne");
 
-        Product strato = new Product("Fender", "Stratocaster");
-        Product sg = new Product("Gibson", "SG");
-        Product lesPaul = new Product("Gibson", "Les Paul");
-        Product rr = new Product("Jackson", "RR");
+        var strato = new Product("Fender", "Stratocaster");
+        var sg = new Product("Gibson", "SG");
+        var lesPaul = new Product("Gibson", "Les Paul");
+        var rr = new Product("Jackson", "RR");
 
         return List.of(
                 new Order(gilmour, List.of(strato)),
@@ -847,14 +847,13 @@ public class Day022 {
         );
     }
 
-    record Customer(String name, String band) {
+    static record Customer(String name, String band) {
     }
 
-    record Product(String brand, String modelName) {
+    static record Product(String brand, String modelName) {
     }
 
-    record Order(Customer customer, List<Product> products) {
+    static record Order(Customer customer, List<Product> products) {
     }
 }
-
 ----
