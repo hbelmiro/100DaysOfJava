@@ -93,5 +93,6 @@
         <module>day023</module>
         <module>day024</module>
         <module>day025</module>
+        <module>day026</module>
     </modules>
 </project>
