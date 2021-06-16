@@ -15,7 +15,8 @@ public class Day028 {
 
         players.sort(Comparator.comparing(Player::numberOfGoals).reversed());
 
-        System.out.println(players);
+        System.out.println("Top Scorers:");
+        players.forEach(System.out::println);
     }
 
     private record Player(String name, String club, String coutry, int numberOfGoals) {
