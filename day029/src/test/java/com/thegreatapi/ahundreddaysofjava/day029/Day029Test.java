@@ -16,7 +16,7 @@ class Day029Test {
         CompletableFuture.runAsync(day029::startComputingPrimes);
 
         // Await until the already computed primes contain the key 100_000
-        await().until(day029::getAlreadyComputedPrimes, primes -> primes.containsKey(100_000));
+        await().until(() -> day029.getAlreadyComputedPrimes().containsKey(100_000));
 
         assertEquals(1299709, day029.getAlreadyComputedPrimes().get(100_000));
     }
