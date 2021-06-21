@@ -1,11 +1,10 @@
 package com.thegreatapi.ahundreddaysofjava.day032;
 
-import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
 public class Day032 {
 
-    public static void main(String[] args) throws NoSuchAlgorithmException {
+    public static void main(String[] args) {
         String result = map(randomNumber());
         System.out.println(result);
     }
