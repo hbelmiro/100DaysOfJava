@@ -1160,12 +1160,11 @@ public class Day031 {
 ----
 package com.thegreatapi.ahundreddaysofjava.day032;
 
-import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
 public class Day032 {
 
-    public static void main(String[] args) throws NoSuchAlgorithmException {
+    public static void main(String[] args) {
         String result = map(randomNumber());
         System.out.println(result);
     }
@@ -1182,6 +1181,34 @@ public class Day032 {
 
     private static int randomNumber() {
         return new SecureRandom().nextInt(4);
+    }
+}
+----
+
+== Day 33 - Start using `Optional#orElseThrow` instead of `Optional#get`.
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day033;
+
+import java.time.LocalTime;
+import java.util.Optional;
+
+public class Day033 {
+
+    public static void main(String[] args) {
+        Optional<LocalTime> optionalValue = getOptionalValue();
+
+        // Stop using Optional#get.
+        // It will be deprecated soon, as you can see in https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8160606
+        System.out.println(optionalValue.get());
+
+        // Start using Optional#orElseThrow instead of Optional#get
+        System.out.println(getOptionalValue().orElseThrow());
+    }
+
+    private static Optional<LocalTime> getOptionalValue() {
+        return Optional.of(LocalTime.now());
     }
 }
 ----
