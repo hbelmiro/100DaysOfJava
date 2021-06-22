@@ -101,5 +101,6 @@
         <module>day031</module>
         <module>day032</module>
         <module>day033</module>
+        <module>day034</module>
     </modules>
 </project>
