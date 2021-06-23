@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>100daysofjava</artifactId>
+        <groupId>com.thegreatapi.100daysofjava</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>days</artifactId>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>day001</module>
+        <module>day002</module>
+        <module>day003</module>
+        <module>day004</module>
+        <module>day005</module>
+        <module>day006</module>
+        <module>day007</module>
+        <module>day008</module>
+        <module>day009</module>
+        <module>day010</module>
+        <module>day011</module>
+        <module>day012</module>
+        <module>day013</module>
+        <module>day014</module>
+        <module>day015</module>
+        <module>day016</module>
+        <module>day017</module>
+        <module>day018</module>
+        <module>day019</module>
+        <module>day020</module>
+        <module>day021</module>
+        <module>day022</module>
+        <module>day023</module>
+        <module>day024</module>
+        <module>day025</module>
+        <module>day026</module>
+        <module>day027</module>
+        <module>day028</module>
+        <module>day029</module>
+        <module>day030</module>
+        <module>day031</module>
+        <module>day032</module>
+        <module>day033</module>
+        <module>day034</module>
+        <module>day035</module>
+    </modules>
+
+</project>
