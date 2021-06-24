@@ -1274,7 +1274,7 @@ public class Day035 {
 }
 ----
 
-== Day 36 - Using `javax.annotation.Nonnull` (JSR 305).
+== Day 36 - Using `javax.annotation.Nonnull` (JSR 305) to avoid `NullPointerException`.
 
 [source,java]
 ----
