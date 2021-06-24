@@ -1276,10 +1276,23 @@ public class Day035 {
 
 == Day 36 - Using `javax.annotation.Nonnull` (JSR 305).
 
-ifdef::env-github[]
-image:https://i9.ytimg.com/vi/2lOrY7g8Cxo/mq1.jpg?sqp=COTb0YYG&rs=AOn4CLAZ0NfOk2HfoQXSrxC0k5mR2Fn7Lg&retry=2[link=https://youtu.be/2lOrY7g8Cxo]
-endif::[]
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day036;
 
-ifndef::env-github[]
-video::2lOrY7g8Cxo[youtube]
-endif::[]
+import javax.annotation.Nonnull;
+
+public final class Day036 {
+
+    private Day036() {
+    }
+
+    public static void main(String[] args) {
+        printLenght(null);
+    }
+
+    public static void printLenght(@Nonnull String s) {
+        System.out.println(s.length());
+    }
+}
+----
