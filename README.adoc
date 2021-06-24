@@ -1273,3 +1273,13 @@ public class Day035 {
     }
 }
 ----
+
+== Day 36 - Using `javax.annotation.Nonnull` (JSR 305).
+
+ifdef::env-github[]
+image:https://i9.ytimg.com/vi/2lOrY7g8Cxo/mq1.jpg?sqp=COTb0YYG&rs=AOn4CLAZ0NfOk2HfoQXSrxC0k5mR2Fn7Lg&retry=2[link=https://youtu.be/2lOrY7g8Cxo]
+endif::[]
+
+ifndef::env-github[]
+video::2lOrY7g8Cxo[youtube]
+endif::[]
