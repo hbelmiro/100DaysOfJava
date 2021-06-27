@@ -1354,3 +1354,7 @@ public class Day038 {
     }
 }
 ----
+
+== Day 39 - Understanding the Prefix (++i) and Postfix (i++) Operators
+
+I did a blog post for that: https://thegreatapi.com/blog/prefix-and-postfix-operators/
