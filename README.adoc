@@ -1358,3 +1358,32 @@ public class Day038 {
 == Day 39 - Understanding the Prefix (++i) and Postfix (i++) Operators
 
 I did a blog post for that: https://thegreatapi.com/blog/prefix-and-postfix-operators/
+
+== Day 40 - Filtering a Stream using `Predicate#not`.
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day040;
+
+import java.util.function.Predicate;
+import java.util.stream.Stream;
+
+import static java.util.function.Predicate.not;
+
+public class Day040 {
+
+    public static void main(String[] args) {
+        // Instead of doing:
+        printAllThat(word -> !word.isEmpty());
+
+        // Just do:
+        printAllThat(not(String::isEmpty));
+    }
+
+    private static void printAllThat(Predicate<String> filter) {
+        Stream.of("avocado", "chair", "", "dog", "car")
+              .filter(filter)
+              .forEach(System.out::println);
+    }
+}
+----
