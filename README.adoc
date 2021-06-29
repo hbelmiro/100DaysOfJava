@@ -1387,3 +1387,46 @@ public class Day040 {
     }
 }
 ----
+
+== Day 41 - Quiz about `Collections#unmodifiableList`.
+
+Given the following:
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day041;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Day041 {
+
+    public static void main(String[] args) {
+        List<String> originalList = new ArrayList<>();
+        originalList.add("one");
+        originalList.add("two");
+        originalList.add("three");
+
+        List<String> copy = Collections.unmodifiableList(originalList);
+
+        originalList.remove("two");
+
+        System.out.println(String.join(" ", copy));
+    }
+}
+----
+
+What will be printed?
+
+a) one two tree
+
+b) one three
+
+c) Exception at `originalList.remove("two");`
+
+d) Exception at `String.join(" ", copy)`
+
+e) Compilation error
+
+https://thegreatapi.com/solutions-for-100-days-of-java/[Check the answer]
