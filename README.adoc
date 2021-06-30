@@ -1430,3 +1430,10 @@ d) Exception at `String.join(" ", copy)`
 e) Compilation error
 
 https://thegreatapi.com/solutions-for-100-days-of-java/[Check the answer]
+
+== Day 42 - Using `jinfo` to update manageable VM flags at runtime.
+
+In this article, https://github.com/Vipin-Sharma[Vipin Sharma] explains how to use the utility `jinfo`, which is part of JDK.
+It's preety useful when you need to set HeapDumpOnOutOfMemoryError to investigate a memory leak, for example.
+
+https://jfeatures.com/blog/jinfo
