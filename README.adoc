@@ -2021,7 +2021,7 @@ public final class Day056 {
 }
 ----
 
-== Day 57 - Using https://picocli.info/[Picocli] to parse command arguments
+== Day 57 - Using https://picocli.info/[Picocli] to parse command line arguments
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day057;
