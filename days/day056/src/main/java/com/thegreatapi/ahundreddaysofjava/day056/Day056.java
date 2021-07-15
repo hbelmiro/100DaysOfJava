@@ -10,7 +10,7 @@ public final class Day056 {
     }
 
     @SuppressWarnings("unused")
-    enum Color {
+    public enum Color {
         BLACK("\u001B[30m"),
         BLUE("\u001B[34m"),
         RED("\u001B[31m"),
