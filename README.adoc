@@ -2174,3 +2174,7 @@ public class Day060 {
     }
 }
 ----
+
+== Day 61 - Using `var`: Good practices, advices and warnings from https://github.com/stuart-marks[Stuart Marks]
+
+https://openjdk.java.net/projects/amber/LVTIstyle.html
