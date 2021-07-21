@@ -2241,7 +2241,7 @@ public class Day062 {
 }
 ----
 
-== Day 63 - Using MicroProfile Fault Tolerance to create a fallback mathod.
+== Day 63 - Using MicroProfile Fault Tolerance to create a fallback method.
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava;
