@@ -2395,7 +2395,7 @@ public class Day066 {
 }
 ----
 
-== Day 67 - Replacing Lombok With Pure Java
+== Day 67 - Use EnumMap When the Key of Your Map Is an Enum
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day067;
