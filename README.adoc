@@ -2511,7 +2511,7 @@ class Day070Test {
 }
 ----
 
-== Day 71 - Using CDI in standalone application with Weld.
+== Day 71 - Using CDI in a standalone application with Weld.
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day071;
