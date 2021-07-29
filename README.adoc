@@ -2510,3 +2510,75 @@ class Day070Test {
     }
 }
 ----
+
+== Day 71 - Using CDI in standalone application with Weld.
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day071;
+
+import org.jboss.weld.environment.se.Weld;
+import org.jboss.weld.environment.se.WeldContainer;
+
+public class Day071 {
+
+    public static void main(String[] args) {
+        Weld weld = new Weld();
+        WeldContainer container = weld.initialize();
+        Application application = container.select(Application.class).getHandler().get();
+
+        application.run();
+
+        container.shutdown();
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day071;
+
+import com.thegreatapi.ahundreddaysofjava.day071.calculator.Calculator;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+
+@ApplicationScoped
+class Application {
+
+    private final Calculator calculator;
+
+    @Inject
+    private Application(Calculator calculator) {
+        this.calculator = calculator;
+    }
+
+    public void run() {
+        System.out.println(calculator.sum(2, 3));
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day071.calculator;
+
+public interface Calculator {
+
+    int sum(int a, int b);
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day071.calculator;
+
+class CalculatorImpl implements Calculator {
+
+    private CalculatorImpl() {
+    }
+
+    @Override
+    public int sum(int a, int b) {
+        return a + b;
+    }
+}
+----
