@@ -2537,29 +2537,29 @@ public class Day071 {
 ----
 package com.thegreatapi.ahundreddaysofjava.day071;
 
-import com.thegreatapi.ahundreddaysofjava.day071.calculator.Calculator;
+import com.thegreatapi.ahundreddaysofjava.day071.animal.Calculator;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
 @ApplicationScoped
 class Application {
 
-    private final Calculator calculator;
+    private final Calculator animal;
 
     @Inject
-    private Application(Calculator calculator) {
-        this.calculator = calculator;
+    private Application(Calculator animal) {
+        this.animal = animal;
     }
 
     public void run() {
-        System.out.println(calculator.sum(2, 3));
+        System.out.println(animal.sum(2, 3));
     }
 }
 ----
 
 [source,java]
 ----
-package com.thegreatapi.ahundreddaysofjava.day071.calculator;
+package com.thegreatapi.ahundreddaysofjava.day071.animal;
 
 public interface Calculator {
 
@@ -2569,7 +2569,7 @@ public interface Calculator {
 
 [source,java]
 ----
-package com.thegreatapi.ahundreddaysofjava.day071.calculator;
+package com.thegreatapi.ahundreddaysofjava.day071.animal;
 
 class CalculatorImpl implements Calculator {
 
@@ -2579,6 +2579,73 @@ class CalculatorImpl implements Calculator {
     @Override
     public int sum(int a, int b) {
         return a + b;
+    }
+}
+----
+
+== Day 72 - Using the CDI annotation `@Named`.
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day072;
+
+import com.thegreatapi.ahundreddaysofjava.day072.calculator.Animal;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+
+@ApplicationScoped
+class Application {
+
+    private final Animal dog;
+    private final Animal cat;
+
+    @Inject
+    private Application(@Named("Dog") Animal dog, @Named("Cat") Animal cat) {
+        this.dog = dog;
+        this.cat = cat;
+    }
+
+    public void run() {
+        System.out.println("The dog says: " + dog.speak());
+        System.out.println("The cat says: " + cat.speak());
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day072.calculator;
+
+import jakarta.inject.Named;
+
+@Named("Dog")
+class Dog implements Animal {
+
+    private Dog() {
+    }
+
+    @Override
+    public String speak() {
+        return "woof";
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day072.calculator;
+
+import jakarta.inject.Named;
+
+@Named("Cat")
+class Cat implements Animal {
+
+    private Cat(){
+    }
+
+    @Override
+    public String speak() {
+        return "meow";
     }
 }
 ----
