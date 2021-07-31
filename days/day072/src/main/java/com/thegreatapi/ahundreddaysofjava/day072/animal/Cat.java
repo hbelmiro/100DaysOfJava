@@ -1,4 +1,4 @@
-package com.thegreatapi.ahundreddaysofjava.day072.calculator;
+package com.thegreatapi.ahundreddaysofjava.day072.animal;
 
 import jakarta.inject.Named;
 

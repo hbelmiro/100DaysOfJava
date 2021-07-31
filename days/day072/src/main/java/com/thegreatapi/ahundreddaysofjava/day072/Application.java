@@ -1,6 +1,6 @@
 package com.thegreatapi.ahundreddaysofjava.day072;
 
-import com.thegreatapi.ahundreddaysofjava.day072.calculator.Animal;
+import com.thegreatapi.ahundreddaysofjava.day072.animal.Animal;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
