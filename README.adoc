@@ -2784,3 +2784,44 @@ public class Day074 {
     }
 }
 ----
+
+== Day 75 - Declaring specific Producers for CDI Beans.
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day075;
+
+import jakarta.inject.Inject;
+
+class Application {
+
+    private final PaymentProcessor paymentProcessor;
+
+    @Inject
+    private Application(PaymentProcessor paymentProcessor) {
+        this.paymentProcessor = paymentProcessor;
+    }
+
+    public void run() {
+        paymentProcessor.process(new Payment());
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day075;
+
+import jakarta.enterprise.inject.Produces;
+
+final class PaymentProcessorFactory {
+
+    private PaymentProcessorFactory() {
+    }
+
+    @Produces
+    static PaymentProcessor createPaymentProcessor() {
+        return new PaymentProcessorImpl(new DependencyA(), new DependencyB());
+    }
+}
+----
