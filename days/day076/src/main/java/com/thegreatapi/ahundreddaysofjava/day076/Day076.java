@@ -7,7 +7,7 @@ import javax.ws.rs.core.MediaType;
 import java.time.LocalDate;
 import java.util.List;
 
-@Path("/band")
+@Path("/person")
 public class Day076 {
 
     // To start the server, run:
@@ -15,7 +15,7 @@ public class Day076 {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Person> getBand() {
+    public List<Person> getPeople() {
         return List.of(
                 new Person("1", "Ozzy Osbourne", LocalDate.of(1948, 12, 3)),
                 new Person("2", "Tony Iommi", LocalDate.of(1948, 2, 19)),
