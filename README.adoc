@@ -2884,4 +2884,4 @@ public class Day076 {
 
 == Day 77 - A YouTube channel with several presentations from Java Champions and Open Source Developers
 
-https://www.youtube.com/channel/UCEGhUuEWZjQEUMt4irjR8ow[International Developer Career Day]
+https://www.youtube.com/channel/UCEGhUuEWZjQEUMt4irjR8ow[International Developer Career Day YouTube Channel]
