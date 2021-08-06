@@ -2911,3 +2911,59 @@ public class Day078 {
     }
 }
 ----
+
+== Day 79 - Using the Factory Pattern to Encapsulate Implementations
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day079;
+
+import com.thegreatapi.ahundreddaysofjava.day079.myservice.MyService;
+import com.thegreatapi.ahundreddaysofjava.day079.myservice.MyServiceFactory;
+
+public class Day079 {
+
+    public static void main(String[] args) {
+        // This class has access to MyService and MyServiceFactory, but not MyServiceImpl
+        MyService myService = MyServiceFactory.createMyService();
+        myService.run();
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day079.myservice;
+
+public interface MyService {
+
+    void run();
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day079.myservice;
+
+class MyServiceImpl implements MyService {
+
+    @Override
+    public void run() {
+        System.out.println("Running my service...");
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day079.myservice;
+
+public final class MyServiceFactory {
+
+    private MyServiceFactory() {
+    }
+
+    public static MyService createMyService() {
+        return new MyServiceImpl();
+    }
+}
+----
