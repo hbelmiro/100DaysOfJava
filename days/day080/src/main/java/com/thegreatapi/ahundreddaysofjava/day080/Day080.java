@@ -22,11 +22,12 @@ public class Day080 {
         }
     }
 
-    private static class Bird implements Animal {
-
-        @Override
-        public void speak() {
-            System.out.println("Pew");
-        }
-    }
+//    Bird is not allowed in the sealed hierarchy
+//    private static class Bird implements Animal {
+//
+//        @Override
+//        public void speak() {
+//            System.out.println("Pew");
+//        }
+//    }
 }
