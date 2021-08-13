@@ -11,7 +11,7 @@ import java.time.temporal.ChronoUnit;
 @Path("/hello")
 public class Day084 {
 
-    private static int numberOfAttempts = 0;
+    private static int numberOfAttempts;
 
     @GET
     @Retry(maxRetries = 3, delay = 2, delayUnit = ChronoUnit.SECONDS)
