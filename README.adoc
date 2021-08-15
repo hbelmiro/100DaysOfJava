@@ -3277,7 +3277,7 @@ public class Day087 {
 }
 ----
 
-== Day 87 - Verifying if a field is annotated by a particular annotation.
+== Day 88 - Verifying if a field is annotated by a particular annotation.
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day088;
