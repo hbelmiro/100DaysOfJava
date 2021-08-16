@@ -3327,3 +3327,126 @@ public class Day088 {
     }
 }
 ----
+
+== Day 89 - Writing a Bean Validator.
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day089;
+
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+
+@ApplicationScoped
+class Application {
+
+    private final BeanValidator beanValidator;
+
+    @Inject
+    Application(BeanValidator beanValidator) {
+        this.beanValidator = beanValidator;
+    }
+
+    public void run() {
+        var p = new Person("Freddie", 58);
+        beanValidator.validate(p);
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day089;
+
+class Person {
+
+    private final String name;
+
+    private final int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Maximum(17)
+    public int getAge() {
+        return age;
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day089;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+@interface Maximum {
+    int value();
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day089;
+
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+
+import java.util.Arrays;
+
+@ApplicationScoped
+class BeanValidator {
+
+    private final MethodValidator methodValidator;
+
+    @Inject
+    BeanValidator(MethodValidator methodValidator) {
+        this.methodValidator = methodValidator;
+    }
+
+    void validate(Object o) {
+        Arrays.stream(o.getClass().getDeclaredMethods())
+              .filter(method -> method.isAnnotationPresent(Maximum.class))
+              .forEach(method -> methodValidator.validate(method, o));
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day089;
+
+import jakarta.enterprise.context.ApplicationScoped;
+
+import java.lang.reflect.Method;
+
+@ApplicationScoped
+class MethodValidator {
+
+    void validate(Method method, Object object) {
+        Object value;
+        try {
+            value = method.invoke(object);
+        } catch (ReflectiveOperationException e) {
+            throw new RuntimeException(e);
+        }
+
+        int maximum = method.getAnnotation(Maximum.class).value();
+
+        if (value instanceof Integer number && number > maximum) {
+            throw new RuntimeException("Invalid object. Method " + method.getName() +
+                    " can't return a value greater than " + maximum);
+        }
+    }
+}
+----
