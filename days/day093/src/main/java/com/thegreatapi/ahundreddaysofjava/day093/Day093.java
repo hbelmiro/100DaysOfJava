@@ -9,7 +9,7 @@ public class Day093 {
     public static void main(String[] args) {
         List<String> myList = getList();
 
-        // If myList is null, a NullPointerException will be thrown
+//      If myList is null, a NullPointerException will be thrown
         for (String s : myList) {
             System.out.println(s);
         }
