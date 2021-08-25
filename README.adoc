@@ -3748,3 +3748,78 @@ public class Day097 {
     }
 }
 ----
+
+== Day 98 - Using CDI Interceptors to create validator annotations
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day098;
+
+import jakarta.inject.Inject;
+
+public class Application {
+
+    private final MyService myService;
+
+    @Inject
+    public Application(MyService myService) {
+        this.myService = myService;
+    }
+
+    public void run() {
+        // Will throw: Exception in thread "main" java.lang.RuntimeException: The email helber @ not valid email is not valid.
+        System.out.println(myService.hello("helber @ not valid email"));
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day098;
+
+import jakarta.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
+@Validate
+public class MyService {
+
+    public String hello(@Email String email) {
+        return "Hello " + email;
+    }
+}
+----
+
+[source,java]
+----
+package com.thegreatapi.ahundreddaysofjava.day098;
+
+import jakarta.annotation.Priority;
+import jakarta.inject.Inject;
+import jakarta.interceptor.AroundInvoke;
+import jakarta.interceptor.Interceptor;
+import jakarta.interceptor.InvocationContext;
+
+@Interceptor
+@Validate
+@Priority(1)
+public class ValidationInterceptor {
+
+    private final EmailValidator emailValidator;
+
+    @Inject
+    public ValidationInterceptor(EmailValidator emailValidator) {
+        this.emailValidator = emailValidator;
+    }
+
+    @AroundInvoke
+    public Object intercept(InvocationContext invocationContext) throws Exception {
+        for (var i = 0; i < invocationContext.getParameters().length; i++) {
+            if (invocationContext.getMethod().getParameters()[i].isAnnotationPresent(Email.class)
+                    && invocationContext.getParameters()[i] instanceof String email) {
+                emailValidator.validate(email);
+            }
+        }
+
+        return invocationContext.proceed();
+    }
+}
+----
