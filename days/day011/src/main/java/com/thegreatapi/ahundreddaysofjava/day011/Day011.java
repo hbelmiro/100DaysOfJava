@@ -3,7 +3,6 @@ package com.thegreatapi.ahundreddaysofjava.day011;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class Day011 {
 
@@ -22,11 +21,11 @@ public class Day011 {
     }
 
     private static Map<String, Integer> sortByValue(Map<String, Integer> unsortedMap) {
-        TreeMap<Integer, String> treeMap = new TreeMap<>();
-        unsortedMap.forEach((key, value) -> treeMap.put(value, key));
-
         Map<String, Integer> sortedMap = new LinkedHashMap<>();
-        treeMap.forEach((key, value) -> sortedMap.put(value, key));
+
+        unsortedMap.entrySet().stream()
+                   .sorted(Map.Entry.comparingByValue())
+                   .forEach(entry -> sortedMap.put(entry.getKey(), entry.getValue()));
 
         return Collections.unmodifiableMap(sortedMap);
     }
