@@ -19,7 +19,7 @@ public class Day012 {
 
             doOtherThingWhileCalculating();
 
-            LOGGER.info("Will get the calculated value. Note that the value will be get immediately");
+            LOGGER.info("Will get the calculated value. Note that the value will be got immediately");
             LOGGER.info("Calculated value: " + future.get());
         } catch (ExecutionException e) {
             e.printStackTrace();
