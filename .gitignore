@@ -4,3 +4,4 @@
 /*.ipr
 /*.iws
 **/out/
+**/target/
