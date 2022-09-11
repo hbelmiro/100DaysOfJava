@@ -3,6 +3,8 @@
 
 100 Days of Java was an initiative that consisted of 100 uninterrupted days sharing content about Java on my social media.
 
+See https://twitter.com/helber_belmiro/status/1395394291493650432?s=20&t=2Z8IV87jBhBpnxiKFKst3A[the first tweet].
+
 This is the repository used for 100 Days of Java.
 
 [IMPORTANT]
@@ -11,8 +13,6 @@ https://github.com/hbelmiro/100DaysOfJava/tree/original[The original branch] has
 
 If you are using this for your studies or if you want to submit an improvement, you should use https://github.com/hbelmiro/100DaysOfJava/tree/master[the master branch] for that.
 ====
-
-See https://twitter.com/helber_belmiro/status/1395394291493650432?s=20&t=2Z8IV87jBhBpnxiKFKst3A[the first tweet].
 
 If you have any questions, ask me on my https://thegreatapi.com/social-media/[social media].
 
