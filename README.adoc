@@ -1,5 +1,5 @@
 = 100 Days of Java
-:toc:
+:toc: preamble
 
 100 Days of Java was an initiative that consisted of 100 uninterrupted days sharing content about Java on my social media.
 
