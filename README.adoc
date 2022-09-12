@@ -9,9 +9,9 @@ This is the repository used for 100 Days of Java.
 
 [IMPORTANT]
 ====
-https://github.com/hbelmiro/100DaysOfJava/tree/original[The original branch] has the original code shared on my social media during those days. This branch is not supposed to receive any meaningful updates.
+https://github.com/hbelmiro/100DaysOfJava/tree/master[The master branch] has the original code shared on my social media during those days. This branch is not supposed to receive any meaningful updates.
 
-If you are using this for your studies or if you want to submit an improvement, you should use https://github.com/hbelmiro/100DaysOfJava/tree/master[the master branch] for that.
+If you are using this for your studies or if you want to submit an improvement, you should use https://github.com/hbelmiro/100DaysOfJava/tree/main[the main branch] for that.
 ====
 
 If you have any questions, ask me on my https://thegreatapi.com/social-media/[social media].
