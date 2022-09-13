@@ -1,6 +1,7 @@
 package com.thegreatapi.ahundreddaysofjava.day095;
 
-import com.github.javafaker.Faker;
+
+import net.datafaker.Faker;
 
 import java.util.Date;
 import java.util.List;
@@ -27,6 +28,10 @@ public class Day095 {
 //        Person[firstName=Cristie, lastName=Yundt, dateOfBirth=Thu Sep 04 05:28:06 BRT 1980]
 //        Person[firstName=Brynn, lastName=Tremblay, dateOfBirth=Thu Nov 03 10:28:57 BRST 1988]
 //        Person[firstName=Ahmad, lastName=Homenick, dateOfBirth=Tue Apr 19 15:46:28 BRT 1977]
+
+//        or another way to do the same
+        people = FAKER.<Person>collection().suppliers(Day095::createPerson).len(10).generate();
+        people.forEach(System.out::println);
     }
 
     private static Person createPerson() {
