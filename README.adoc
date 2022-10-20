@@ -2071,6 +2071,15 @@ public final class Day056 {
 ----
 
 == Day 57 - Using https://picocli.info/[Picocli] to parse command line arguments
+
+=== Used libraries
+
+==== Picocli
+
+https://picocli.info/
+
+Picocli is a one-file framework for creating Java command line applications with almost zero code. 
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day057;
