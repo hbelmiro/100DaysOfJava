@@ -765,6 +765,20 @@ public class Day020 {
 
 == Day 21 - Using WireMock to mock a web server.
 
+=== Used libraries
+
+==== WireMock
+
+https://wiremock.org/
+
+WireMock is a tool for building mock APIs.
+
+==== JUnit
+
+https://junit.org/junit5/
+
+JUnit is tool used for unit tests in Java.
+
 [source,java]
 ----
 import com.github.tomakehurst.wiremock.WireMockServer;
