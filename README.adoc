@@ -1993,6 +1993,15 @@ public class Day054 {
 ----
 
 == Day 55 - Creating smart and readable assertions with https://github.com/assertj/assertj-core[AssertJ]
+
+=== Used libraries
+
+==== AssertJ
+
+https://github.com/assertj/assertj
+
+AssertJ provides a rich and intuitive set of strongly-typed assertions to use for unit testing (with JUnit, TestNG or any other test framework).
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day055;
