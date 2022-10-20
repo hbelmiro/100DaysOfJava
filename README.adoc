@@ -2300,6 +2300,15 @@ public class Day062 {
 ----
 
 == Day 63 - Using MicroProfile Fault Tolerance to create a fallback method.
+
+=== Used libraries
+
+==== MicroProfile
+
+https://projects.eclipse.org/projects/technology.microprofile
+
+The MicroProfile® project is aimed at optimizing Enterprise Java for the microservices architecture.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava;
