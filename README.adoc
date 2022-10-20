@@ -2235,7 +2235,7 @@ public class Day060 {
 
 == Day 61 - Using `var`: Good practices, advices and warnings from https://github.com/stuart-marks[Stuart Marks]
 
-https://openjdk.java.net/projects/amber/LVTIstyle.html
+https://openjdk.org/projects/amber/guides/lvti-style-guide
 
 == Day 62 - Converting JSON to Object and Object to JSON using Jakarta JSON Binding (JSON-B).
 [source,java]
