@@ -3130,6 +3130,15 @@ public class Day082 {
 ----
 
 == Day 83 - Using MicroProfile Fault Tolerance to set timeouts on endpoints.
+
+=== Used libraries
+
+==== MicroProfile
+
+https://projects.eclipse.org/projects/technology.microprofile
+
+The MicroProfile® project is aimed at optimizing Enterprise Java for the microservices architecture.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day083;
