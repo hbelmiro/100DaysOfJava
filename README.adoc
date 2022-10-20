@@ -1060,6 +1060,20 @@ public class Day028 {
 
 == Day 29 - Using https://github.com/awaitility/awaitility[Awaitility] to wait for a task to finish.
 
+=== Used libraries
+
+==== Awaitility
+
+http://www.awaitility.org/
+
+Awaitility is a DSL that allows you to express expectations of an asynchronous system in a concise and easy to read manner.
+
+==== JUnit
+
+https://junit.org/junit5/
+
+JUnit is tool used for unit tests in Java.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day029;
