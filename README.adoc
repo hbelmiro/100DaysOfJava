@@ -3852,6 +3852,15 @@ public class AfterOrderCompletesObserver {
 ----
 
 == Day 97 - Using the Money and Currency API (JSR 354)
+
+=== Used libraries
+
+==== Moneta
+
+https://javamoney.github.io/ri.html
+
+The Moneta is a reference implementation (RI) of the JSR 354 Money & Currency API
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day097;
