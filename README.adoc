@@ -3207,6 +3207,15 @@ public class Day084 {
 ----
 
 == Day 85 - Using MicroProfile Fault Tolerance to set Retries on endpoints for specific Exceptions.
+
+=== Used libraries
+
+==== MicroProfile
+
+https://projects.eclipse.org/projects/technology.microprofile
+
+The MicroProfile® project is aimed at optimizing Enterprise Java for the microservices architecture.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day085;
