@@ -3728,6 +3728,15 @@ public class Day094 {
 ----
 
 == Day 95 - Using Datafaker to create fake data for testing.
+
+=== Used libraries
+
+==== Datafaker
+
+https://www.datafaker.net/
+
+Create fake data for your JVM programs within minutes, using our wide range of more than 100 data providers.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day095;
