@@ -765,6 +765,20 @@ public class Day020 {
 
 == Day 21 - Using WireMock to mock a web server.
 
+=== Used libraries
+
+==== WireMock
+
+https://wiremock.org/
+
+WireMock is a tool for building mock APIs.
+
+==== JUnit
+
+https://junit.org/junit5/
+
+JUnit is a tool used for unit tests in Java.
+
 [source,java]
 ----
 import com.github.tomakehurst.wiremock.WireMockServer;
@@ -1045,6 +1059,20 @@ public class Day028 {
 ----
 
 == Day 29 - Using https://github.com/awaitility/awaitility[Awaitility] to wait for a task to finish.
+
+=== Used libraries
+
+==== Awaitility
+
+http://www.awaitility.org/
+
+Awaitility is a DSL that allows you to express expectations of an asynchronous system in a concise and easy to read manner.
+
+==== JUnit
+
+https://junit.org/junit5/
+
+JUnit is a tool used for unit tests in Java.
 
 [source,java]
 ----
@@ -1965,6 +1993,15 @@ public class Day054 {
 ----
 
 == Day 55 - Creating smart and readable assertions with https://github.com/assertj/assertj-core[AssertJ]
+
+=== Used libraries
+
+==== AssertJ
+
+https://github.com/assertj/assertj
+
+AssertJ provides a rich and intuitive set of strongly-typed assertions to use for unit testing (with JUnit, TestNG or any other test framework).
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day055;
@@ -2034,6 +2071,15 @@ public final class Day056 {
 ----
 
 == Day 57 - Using https://picocli.info/[Picocli] to parse command line arguments
+
+=== Used libraries
+
+==== Picocli
+
+https://picocli.info/
+
+Picocli is a one-file framework for creating Java command line applications with almost zero code. 
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day057;
@@ -2189,7 +2235,7 @@ public class Day060 {
 
 == Day 61 - Using `var`: Good practices, advices and warnings from https://github.com/stuart-marks[Stuart Marks]
 
-https://openjdk.java.net/projects/amber/LVTIstyle.html
+https://openjdk.org/projects/amber/guides/lvti-style-guide
 
 == Day 62 - Converting JSON to Object and Object to JSON using Jakarta JSON Binding (JSON-B).
 [source,java]
@@ -2254,6 +2300,15 @@ public class Day062 {
 ----
 
 == Day 63 - Using MicroProfile Fault Tolerance to create a fallback method.
+
+=== Used libraries
+
+==== MicroProfile
+
+https://microprofile.io/
+
+The MicroProfile® project is aimed at optimizing Enterprise Java for the microservices architecture.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava;
@@ -2373,6 +2428,16 @@ public class Day065 {
 ----
 
 == Day 66 - Replacing Lombok With Pure Java
+
+=== Used libraries
+
+==== Lombok
+
+https://projectlombok.org/
+
+Project Lombok is a java library that automatically plugs into your editor and build tools, spicing up your java.
+Never write another getter or equals method again, with one annotation your class has a fully featured builder. Automate your logging variables, and much more.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day066;
@@ -2486,6 +2551,15 @@ public class Day069 {
 ----
 
 == Day 70 - Creating Parameterized Tests With JUnit.
+
+=== Used libraries
+
+==== JUnit
+
+https://junit.org/junit5/
+
+JUnit is tool used for unit tests in Java.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day070;
@@ -3056,6 +3130,15 @@ public class Day082 {
 ----
 
 == Day 83 - Using MicroProfile Fault Tolerance to set timeouts on endpoints.
+
+=== Used libraries
+
+==== MicroProfile
+
+https://microprofile.io/
+
+The MicroProfile® project is aimed at optimizing Enterprise Java for the microservices architecture.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day083;
@@ -3082,6 +3165,15 @@ public class Day083 {
 ----
 
 == Day 84 - Using MicroProfile Fault Tolerance to set Retries on endpoints.
+
+=== Used libraries
+
+==== MicroProfile
+
+https://microprofile.io/
+
+The MicroProfile® project is aimed at optimizing Enterprise Java for the microservices architecture.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day084;
@@ -3115,6 +3207,15 @@ public class Day084 {
 ----
 
 == Day 85 - Using MicroProfile Fault Tolerance to set Retries on endpoints for specific Exceptions.
+
+=== Used libraries
+
+==== MicroProfile
+
+https://microprofile.io/
+
+The MicroProfile® project is aimed at optimizing Enterprise Java for the microservices architecture.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day085;
@@ -3627,6 +3728,15 @@ public class Day094 {
 ----
 
 == Day 95 - Using Datafaker to create fake data for testing.
+
+=== Used libraries
+
+==== Datafaker
+
+https://www.datafaker.net/
+
+Create fake data for your JVM programs within minutes, using our wide range of more than 100 data providers.
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day095;
@@ -3742,6 +3852,15 @@ public class AfterOrderCompletesObserver {
 ----
 
 == Day 97 - Using the Money and Currency API (JSR 354)
+
+=== Used libraries
+
+==== Moneta
+
+https://javamoney.github.io/ri.html
+
+The Moneta is a reference implementation (RI) of the JSR 354 Money & Currency API
+
 [source,java]
 ----
 package com.thegreatapi.ahundreddaysofjava.day097;
