@@ -3170,7 +3170,7 @@ public class Day083 {
 
 ==== MicroProfile
 
-https://projects.eclipse.org/projects/technology.microprofile
+https://microprofile.io/
 
 The MicroProfile® project is aimed at optimizing Enterprise Java for the microservices architecture.
 
