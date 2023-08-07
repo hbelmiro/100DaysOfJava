@@ -16,7 +16,6 @@
         <dependency>
             <groupId>org.jboss.weld.se</groupId>
             <artifactId>weld-se-shaded</artifactId>
-            <version>5.1.1.Final</version>
         </dependency>
     </dependencies>
 </project>
