@@ -42,8 +42,8 @@ jobs:
     steps:
     - uses: actions/setup-java@v3
       with:
-        distribution: 'temurin'
-        java-version: 17
+        distribution: 'zulu'
+        java-version: 21
 
     - name: Checkout repository
       uses: actions/checkout@v4
