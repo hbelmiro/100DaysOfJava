@@ -42,7 +42,7 @@ jobs:
     steps:
     - uses: actions/setup-java@v3
       with:
-        distribution: 'zulu'
+        distribution: 'temurin'
         java-version: 21
 
     - name: Checkout repository
