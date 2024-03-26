@@ -1,28 +1,48 @@
 package com.thegreatapi.ahundreddaysofjava.day003;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.time.LocalTime;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class Day003 {
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-    private final ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
+class Day003Test {
 
-    public static void main(String[] args) throws InterruptedException {
-        var day003 = new Day003();
+    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+    private final PrintStream standardOut = System.out;
+    private ScheduledExecutorService scheduledExecutorService;
+
+    @BeforeEach
+    void setUp() {
+        System.setOut(new PrintStream(outputStreamCaptor));
+        scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
+    }
+
+    @AfterEach
+    void tearDown() {
+        System.setOut(standardOut);
+        scheduledExecutorService.shutdownNow();
+    }
+
+    @Test
+    void testPrintCurrentTimeEvery2Seconds() throws InterruptedException {
+        Day003 day003 = new Day003();
         day003.printCurrentTimeEvery2Seconds();
-        Thread.sleep(15_000);
+
+        TimeUnit.SECONDS.sleep(6); // Wait for 6 seconds to capture output
+
         day003.stopPrinting();
-    }
 
-    public void printCurrentTimeEvery2Seconds() {
-        Runnable task = () -> System.out.println(LocalTime.now());
-        scheduledExecutorService.scheduleAtFixedRate(task, 0, 2, TimeUnit.SECONDS);
-    }
+        String[] lines = outputStreamCaptor.toString().trim().split("\\r?\\n");
 
-    public void stopPrinting() {
-        scheduledExecutorService.shutdown();
+        assertTrue(lines.length >= 2); // At least 2 lines should be printed
+        assertTrue(LocalTime.parse(lines[0]).isBefore(LocalTime.parse(lines[1])));
     }
-
 }
