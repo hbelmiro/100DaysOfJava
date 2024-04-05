@@ -20,7 +20,7 @@
         <version.org.junit.jupiter>5.10.2</version.org.junit.jupiter>
         <version.org.junit.platform>1.10.2</version.org.junit.platform>
         <version.org.assertj>3.25.3</version.org.assertj>
-        <version.jakarta>3.0.0</version.jakarta>
+        <version.jakarta>3.0.1</version.jakarta>
         <version.org.eclipse.yasson>3.0.3</version.org.eclipse.yasson>
         <version.org.awaitility>4.2.1</version.org.awaitility>
         <version.org.projectlombok>1.18.32</version.org.projectlombok>
