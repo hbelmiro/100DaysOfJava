@@ -25,7 +25,7 @@
         <version.org.awaitility>4.2.1</version.org.awaitility>
         <version.org.projectlombok>1.18.32</version.org.projectlombok>
         <version.com.github.tomakehurst.wiremock>2.35.2</version.com.github.tomakehurst.wiremock>
-        <version.info.picocli>4.7.5</version.info.picocli>
+        <version.info.picocli>4.7.6</version.info.picocli>
         <version.org.jboss.weld>5.1.2.Final</version.org.jboss.weld>
         <version.net.datafaker>2.2.2</version.net.datafaker>
         <version.org.javamoney.moneta>1.1</version.org.javamoney.moneta>
