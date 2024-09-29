@@ -1,22 +1,10 @@
 package com.thegreatapi.ahundreddaysofjava.day007;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.text.MessageFormat;
 import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class Day007Test {
-
-    private final PrintStream standardOut = System.out;
-    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-
-    @BeforeEach
-    public void setUp() {
-        System.setOut(new PrintStream(outputStreamCaptor));
-    }
 
     @Test
     void shouldFormatMessageCorrectly() {
@@ -37,8 +25,4 @@ class Day007Test {
         assertThat(actualMessage).isEqualTo(expectedMessage);
     }
 
-    @AfterEach
-    public void tearDown() {
-        System.setOut(standardOut);
-    }
 }
