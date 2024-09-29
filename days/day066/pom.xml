@@ -11,17 +11,4 @@
 
     <artifactId>day066</artifactId>
 
-    <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
-        </dependency>
-    </dependencies>
-
 </project>

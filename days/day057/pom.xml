@@ -11,16 +11,10 @@
 
     <artifactId>day057</artifactId>
 
-    <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>info.picocli</groupId>
             <artifactId>picocli</artifactId>
-            <version>4.6.1</version>
         </dependency>
     </dependencies>
 

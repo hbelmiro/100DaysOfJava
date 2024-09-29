@@ -11,16 +11,11 @@
 
     <artifactId>day096</artifactId>
 
-    <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
-    </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.jboss.weld.se</groupId>
             <artifactId>weld-se-shaded</artifactId>
-            <version>4.0.2.Final</version>
         </dependency>
     </dependencies>
 

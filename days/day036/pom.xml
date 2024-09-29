@@ -11,9 +11,10 @@
 
     <artifactId>day036</artifactId>
 
-    <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
-    </properties>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+        </dependency>
+    </dependencies>
 </project>
