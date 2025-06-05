@@ -13,7 +13,7 @@
 
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.23.0</quarkus.platform.version>
+        <quarkus.platform.version>3.23.2</quarkus.platform.version>
 
         <version.com.google.code.findbugs>3.0.2</version.com.google.code.findbugs>
         <version.com.google.jimfs>1.3.0</version.com.google.jimfs>
