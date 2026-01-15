@@ -25,7 +25,7 @@
         <version.org.projectlombok>1.18.42</version.org.projectlombok>
         <version.com.github.tomakehurst.wiremock>2.35.2</version.com.github.tomakehurst.wiremock>
         <version.info.picocli>4.7.7</version.info.picocli>
-        <version.org.jboss.weld>6.0.3.Final</version.org.jboss.weld>
+        <version.org.jboss.weld>6.0.4.Final</version.org.jboss.weld>
         <version.net.datafaker>2.5.3</version.net.datafaker>
         <version.org.javamoney.moneta>1.1</version.org.javamoney.moneta>
         <version.org.openjdk.jmh>1.37</version.org.openjdk.jmh>
