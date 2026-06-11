@@ -27,7 +27,7 @@
         <version.info.picocli>4.7.7</version.info.picocli>
         <version.org.jboss.weld>6.0.4.Final</version.org.jboss.weld>
         <version.net.datafaker>2.5.4</version.net.datafaker>
-        <version.org.javamoney.moneta>1.1</version.org.javamoney.moneta>
+        <version.org.javamoney.moneta>1.4.5</version.org.javamoney.moneta>
         <version.org.openjdk.jmh>1.37</version.org.openjdk.jmh>
     </properties>
 
