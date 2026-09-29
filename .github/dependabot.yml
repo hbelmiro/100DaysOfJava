@@ -3,10 +3,14 @@ updates:
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     ignore:
       - dependency-name: "org.apache.maven.plugins:maven-compiler-plugin"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    groups:
+      codeql-action:
+        patterns:
+          - "github/codeql-action/*"
