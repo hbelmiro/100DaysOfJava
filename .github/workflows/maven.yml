@@ -29,3 +29,16 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B verify --file pom.xml
+
+  dependabot:
+    name: Dependabot Auto-merge
+    needs: [ build ]
+    if: ${{ github.event_name == 'pull_request' && github.actor == 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: hbelmiro/dependabot-automerge@e655324a75c5bfbb3f373a8b466a9f628b3765fa # v1.0.0
+        with:
+          merge-method: squash
