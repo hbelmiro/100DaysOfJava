@@ -39,6 +39,6 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: hbelmiro/dependabot-automerge@e655324a75c5bfbb3f373a8b466a9f628b3765fa # v1.0.0
+      - uses: hbelmiro/dependabot-automerge@79b1583cb6482adde47f3aca4ff6fdeb71a71a8b # v1.1.0
         with:
           merge-method: squash
